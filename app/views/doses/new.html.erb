@@ -1,0 +1,9 @@
+<div class="container">
+  <h4>Add ingredients</h4>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :ingredient_id, collection: @ingredients %>
+  <%= f.input :description, label: 'Description', error: 'Description is mandatory' %>
+  <%= f.button :submit %>
+  <% end %>
+
+</div>
