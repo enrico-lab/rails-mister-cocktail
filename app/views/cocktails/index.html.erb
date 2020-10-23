@@ -1,5 +1,27 @@
-<h1>Cocktails</h1>
-<% @cocktails.each do |cocktail| %>
-  <p><%= cocktail.name %></p>
-  <%= link_to "Show", cocktail %>
-  <% end %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">;
+  <div class="container">
+    <h1>GET DRUNK</h1>
+    <h2>with style</h2>
+    <%= link_to "new cocktail", new_cocktail_path, class: "btn btn-flat" %>
+  </div>
+</div>
+
+<div class="cards">
+  <% @cocktails.each do |cocktail| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <p><%= cocktail.name %></p>
+    <%= link_to "Show", cocktail %>
+    <% end %>
+  </div>
+</div>
+<br>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+</div>
