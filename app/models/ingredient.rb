@@ -1,4 +1,4 @@
 class Ingredient < ApplicationRecord
-  validates :name, presence: true, uniqueness: true, allow_blank: false
+  validates :name, presence: true, uniqueness: true
   has_many :doses
 end

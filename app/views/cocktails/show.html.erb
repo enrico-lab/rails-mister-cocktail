@@ -6,11 +6,12 @@
   <h4>Ingredients : </h4>
   <% @cocktail.doses.each do |dose| %>
   <li>
-    <%= dose.ingredient.name %><%= dose.description %><br><%= link_to "Delete an ingredient", dose_path(dose), method: :delete %>
+    <%= dose.ingredient.name %> <%= dose.description %><br><%= link_to "Delete", dose_path(dose), class: "btn btn-flat", method: :delete %>
     <% end %>
   </li>
 </div>
 
 
+<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
 <%= link_to "Return to Cocktails", cocktails_path %>
 <%= link_to "Add ingredients", new_cocktail_dose_path(@cocktail) %>

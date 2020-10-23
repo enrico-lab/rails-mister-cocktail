@@ -1,5 +1,5 @@
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">;
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.maxim.com/.image/t_share/MTUwODg5MTM1MDY0NzU0MDA5/cocktails-promo.jpg);">;
   <div class="container">
     <h1>GET DRUNK</h1>
     <h2>with style</h2>
@@ -12,27 +12,17 @@
   <br>
   <h3>Popular Drinks</h3>
     <figure>
-      <div class="card card-1">
-         <% @cocktails.each do |cocktail| %>
-        <img src="https://www.thecocktaildb.com/images/media/drink/3z6xdi1589574603.jpg" width="190" height="190">
+       <% @cocktails.each do |cocktail| %>
+
         <div>
           <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
-        </div>
+          <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
         <% end %>
       </div>
     </figure>
   </a>
 </div>
 
-<!-- <div class="cards">
-  <% @cocktails.each do |cocktail| %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-    <p><%= cocktail.name %></p>
-    <%= link_to "Show", cocktail %>
-    <% end %>
-  </div>
-</div>
-<br> -->
 
 <div class="footer">
   <div class="footer-links">
