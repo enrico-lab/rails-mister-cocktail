@@ -5,10 +5,10 @@
   <p></p>
   <h4>Ingredients : </h4>
   <% @cocktail.doses.each do |dose| %>
-  <ul>
-    <li><%= dose.ingredient.name %><%= dose.description %><br><%= link_to "Delete an ingredient", dose_path(dose), method: :delete %></li>
+  <li>
+    <%= dose.ingredient.name %><%= dose.description %><br><%= link_to "Delete an ingredient", dose_path(dose), method: :delete %>
     <% end %>
-  </ul>
+  </li>
 </div>
 
 
